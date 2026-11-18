@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #0b0d12;
+    --color-band: #10131b;
+    --color-surface: #161b26;
+    --color-surface-alt: #1e2534;
+    --color-text: #f6f4ee;
+    --color-muted: #a8b0c2;
+    --color-line: #272f40;
+    --color-accent: #e4c06c;
+    --color-accent-ink: #14110a;
+    --color-link: #89b0ff;
+  }
+
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Plus Jakarta Sans', 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+  }
+
+  html[lang='bn'] {
+    font-family: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: 'Manrope', 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+  }
+
+  html[lang='bn'] h1,
+  html[lang='bn'] h2,
+  html[lang='bn'] h3,
+  html[lang='bn'] h4,
+  html[lang='bn'] .font-display {
+    font-family: 'Hind Siliguri', 'Manrope', system-ui, -apple-system, sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid #e4c06c;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
